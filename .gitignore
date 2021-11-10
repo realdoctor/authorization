@@ -1,0 +1,34 @@
+/.settings/
+/target/
+
+#eclipse files
+.classpath
+.project
+.settings/
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files  
+*.class
+
+# Generated files
+/bin/
+/gen/
+/out/
+
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Log Files
+*.log
+
+# Intellij
+*.iml
+*/.settings/
+*/.DS_Store
+.DS_Store
+*/.idea/
+.idea/
