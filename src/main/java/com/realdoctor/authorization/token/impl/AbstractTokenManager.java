@@ -15,7 +15,8 @@ public abstract class AbstractTokenManager implements TokenManager {
     /**
      * jwt签名密钥
      */
-    public String  signSecret                = JwtConfig.JWT_SECRET;
+    public String  signKey                   = JwtConfig.JWT_SECRET;
+
     /**
      * 有效时间
      */
@@ -33,11 +34,11 @@ public abstract class AbstractTokenManager implements TokenManager {
         this.singleToken = singleToken;
     }
 
-    public void setSignSecret(String signSecret) {
-        this.signSecret = signSecret;
-        JwtConfig.JWT_SECRET = signSecret;
+    public void setSignKey(String signKey) {
+        this.signKey = signKey;
+        JwtConfig.JWT_SECRET = signKey;
     }
-
+    
     public void setExpiresIn(int expiresIn) {
         this.expiresIn = expiresIn;
         JwtConfig.TOKEN_EXPIRES_SECONDS = expiresIn;
