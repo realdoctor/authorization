@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -18,7 +17,6 @@ import com.realdoctor.authorization.JwtConfig;
  * @author xl.liu
  */
 @Component
-@ConditionalOnBean(RedisTemplate.class)
 @ConfigurationProperties(prefix = "jwt")
 public class RedisTokenManager extends AbstractTokenManager {
 
