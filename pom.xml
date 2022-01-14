@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.xh32t03.framework</groupId>
+	<groupId>com.realdoctor</groupId>
 	<artifactId>authorization</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
@@ -65,12 +65,12 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>maven-releases</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<id>nexus-releases</id>
+			<url>http://192.168.0.247:8081/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>maven-snapshots</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<id>nexus-snapshots</id>
+			<url>http://192.168.0.247:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
