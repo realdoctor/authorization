@@ -32,7 +32,7 @@ public class JwtUtil {
      * @param ttlMillis 有效期，单位毫秒
      * @return token
      */
-    public static String createJWT(String subject, Map<String, Object> claims, long TTLMillis) {
+    public static String createJWT(String subject, Map<String, Object> claims, long ttlMillis) {
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
@@ -49,9 +49,9 @@ public class JwtUtil {
             }
         }
         // 添加Token过期时间
-        if (TTLMillis >= 0) {
+        if (ttlMillis >= 0) {
             // 过期时间
-            long expMillis = nowMillis + TTLMillis;
+            long expMillis = nowMillis + ttlMillis;
             // 现在是什么时间
             Date exp = new Date(expMillis);
             // 系统时间之前的token都是不可以被承认的
@@ -91,7 +91,7 @@ public class JwtUtil {
     /**
      * 生成Token
      * 
-     * @param str
+     * @param subject
      * @return
      */
     public static String generToken(String subject) {
