@@ -143,7 +143,7 @@ public class RedisTokenManager extends AbstractTokenManager {
      * 设置过期时间
      * 
      * @param key 键
-     * @param time 时间(秒)
+     * @param timeout 时间(秒)
      * @param unit
      * @return
      */
